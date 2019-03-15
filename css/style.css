@@ -1,0 +1,205 @@
+/*********** GLOBALS ************/
+*{
+	box-sizing: border-box;
+}
+.wrapper{
+	font-family: sans-serif;
+	font-size: 16px;
+	line-height: 1.4;
+}
+h1{
+	text-align: center;
+	font-size: 5em;
+	font-weight: bold;
+	margin: 20px auto;
+}
+h2{
+	text-align: center;
+	font-size: 1.6em;
+	font-weight: bold;
+	margin: 20px auto;
+}
+/*********** HEADER ************/
+nav{
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+}
+.logo{
+	background-color: #333;
+	color: #FFF;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+	width: 100px;
+	height: 100px;
+	border-radius: 25px;
+	margin-right: auto;
+}
+.navigation{
+	display: flex;
+	flex-flow: row wrap;
+}
+.navigation li{
+	padding: 10px;
+	/* this code to align anchors within li */
+	display: flex;
+	flex-flow: row wrap;
+	align-items: center;
+}
+.navigation a{
+	text-decoration: none;
+	color: #000;
+}
+.hamburger{
+	width: 50px;
+	height: 50px;
+	display: none;
+}
+/*********** BANNER ************/
+.banner{
+	width: 100%;
+	height: 500px;
+	background-color: black;
+	color: white;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-weight: bold;
+}
+/*********** PORTFOLIO ************/
+.project-container{
+	/*width: 300px;*/
+	margin: 20px auto;
+	box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+.project-thumbnail{
+	height: 300px;
+	background-size: cover;
+	background-position: top center;
+}
+.ojs{
+	background-image: url('../img/design.png');
+}
+.ecc{
+	background-image: url('../img/ecc.png');
+}
+.project-title{
+	font-weight: bold;
+	text-align: center;
+	padding: 20px;
+	box-shadow: 0 0 20px rgba(0,0,0,0.3);
+}
+/*********** ABOUT ************/
+.img-placeholder{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+	align-items: center;
+}
+.self-img{
+	width: 300px;
+	height: 300px;
+	border-radius: 50%;
+	background-color: blue;
+}
+/*********** CONTACT ************/
+.mail{
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+}
+.linkedin a{
+	color: black;
+	text-decoration: none;
+	
+	/* otherwise, the text doesn't center properly */
+	display: flex;
+	flex-flow: column wrap;
+	justify-content: center;
+	align-items: center;
+}
+/*********** FOOTER ************/
+footer{
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: center;
+}
+footer p{
+	padding: 5px;
+}
+/*********** MEDIA-QUERIES ************/
+@media screen and (max-width: 575px){
+	h1{
+		font-size: 3em;
+	}
+	.navigation a{
+		display: none;
+	}
+	.hamburger{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+	.banner{
+		max-width: 100%;
+	}
+	.project-container{
+		width: 100%;
+	}
+	.project-title{
+		width: 100%;
+	}
+}
+@media screen and (min-width: 576px) and (max-width: 768px){
+	
+}
+@media screen and (min-width: 769px) and (max-width: 991px){
+	
+}
+@media screen and (min-width: 992px){
+	.portfolio{
+		display: flex;
+		flex-flow: row wrap;
+	}
+	.portfolio h2{
+		flex-basis: 100%;
+	}
+	.project-single{
+		width: 50%;
+		padding: 20px;
+	}
+	.about{
+		display: flex;
+		flex-flow: row wrap;
+	}
+	.about h2{
+		flex-basis: 100%;
+	}
+	.img-placeholder{
+		width: 25%;
+	}
+	.about p{
+		width: 75%;
+	}
+	.contact{
+		display: flex;
+		flex-flow: row wrap;
+	}
+	.contact h2{
+		flex-basis: 100%;
+	}
+	.mail,
+	.linkedin{
+		width: 50%;
+	}
+}
+/*********** MISCELLANEOUS ************/
+.bold{
+	font-weight: bold;
+}
+.company{
+	color: red;
+}
