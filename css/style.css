@@ -19,6 +19,10 @@ h2{
 	font-weight: bold;
 	margin: 20px auto;
 }
+h3{
+	font-size: 1.4em;
+	font-weight: bold;
+}
 /*********** HEADER ************/
 nav{
 	display: flex;
@@ -73,6 +77,7 @@ nav{
 	/*width: 300px;*/
 	margin: 20px auto;
 	box-shadow: 0 0 20px rgba(0,0,0,0.3);
+	width: 100%;
 }
 .project-thumbnail{
 	height: 300px;
@@ -90,6 +95,27 @@ nav{
 	text-align: center;
 	padding: 20px;
 	box-shadow: 0 0 20px rgba(0,0,0,0.3);
+	width: 100%;
+}
+/*********** SINGLE PROJECT DETAILED VIEW ************/
+.project-detailed-view{
+	display: flex;
+	flex-flow: row wrap;
+}
+.project-enlarged{
+	width: 98%;
+	margin: 1%;
+	height: 500px;
+	box-shadow: 0 0 20px rgba(0,0,0,0.3);
+	background-size: cover;
+	background-position: top center;
+}
+.project-detailed-view .project-about{
+	width: 98%;
+	margin: 1%;
+	padding: 20px;
+	background-color: #BBB;
+	border-radius: 25px;
 }
 /*********** ABOUT ************/
 .img-placeholder{
@@ -143,26 +169,27 @@ footer p{
 		justify-content: center;
 		align-items: center;
 	}
-	.banner{
-		max-width: 100%;
-	}
-	.project-container{
-		width: 100%;
-	}
-	.project-title{
-		width: 100%;
-	}
 }
 @media screen and (min-width: 576px) and (max-width: 768px){
 	
 }
 @media screen and (min-width: 769px) and (max-width: 991px){
-	
+	.project-enlarged{
+		width: 48%;
+		margin: 1%;
+	}
+	.project-detailed-view .project-about{
+		width: 48%;
+		margin: 1%;
+	}
 }
 @media screen and (min-width: 992px){
 	.portfolio{
 		display: flex;
 		flex-flow: row wrap;
+	}
+	.portfolio h1{
+		flex-basis: 100%;
 	}
 	.portfolio h2{
 		flex-basis: 100%;
@@ -170,6 +197,14 @@ footer p{
 	.project-single{
 		width: 50%;
 		padding: 20px;
+	}
+	.project-enlarged{
+		width: 48%;
+		margin: 1%;
+	}
+	.project-detailed-view .project-about{
+		width: 48%;
+		margin: 1%;
 	}
 	.about{
 		display: flex;
@@ -202,4 +237,13 @@ footer p{
 }
 .company{
 	color: red;
+}
+.fa-html5{
+	color: orange;
+}
+.fa-css3-alt{
+	color: lightblue;
+}
+.fa-js{
+	color: yellow;
 }
